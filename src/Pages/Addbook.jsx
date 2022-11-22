@@ -29,7 +29,7 @@ function About() {
     data.bookCover = files;
 
     // console.log(data)
-    axios.post('http://localhost:3000/books', data, { headers: { 'x-api-key': localStorage.getItem('token') } }).then(res => {
+    axios.post('https://bookmanagement-project-3-production-f5d6.up.railway.app/books', data, { headers: { 'x-api-key': localStorage.getItem('token') } }).then(res => {
       // console.log(res.data)
       setData({ title: '', excerpt: '', ISBN: '', category: '', subcategory: '', releasedAt: '' })
       toast.success('Book added successfully')
