@@ -33,6 +33,7 @@ function Cart({ name, review, category, title, userid, excerpt, bookId, getBook,
             localStorage.setItem('id', '')
             toast.success('Book Updated successfully')
             getBook()
+            setUpdate({title: '', excerpt: '', ISBN: '', releasedAt: ''})
         }).catch(err => {
             toast.error(err.response.data.message)
         })
