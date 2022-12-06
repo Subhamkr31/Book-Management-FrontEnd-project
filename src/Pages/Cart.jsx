@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 let host = 'https://bookmanagement-project-3-production-f5d6.up.railway.app'
+// let host = 'http://localhost:3000/'
 
 function Cart({ name, review, category, title, userid, excerpt, bookId, getBook, bookCover }) {
     const navigate = useNavigate()
@@ -158,7 +159,7 @@ function Cart({ name, review, category, title, userid, excerpt, bookId, getBook,
             <div  >
                 <div className="card" style={{ 'width': '20rem', 'height': '33rem', 'margin': '20px', }} >
                     <div>
-                        <img src={bookCover ? bookCover :`https://source.unsplash.com/300x300/?Book,Reactbook` } className="card-img-top" alt="no imae" style={{ "width": "270px", "height": "275px", 'cursor': 'pointer' }} onClick={() => navigate(`/books/${bookId}`)} />
+                        <img src={bookCover !== undefined ? bookCover :`https://source.unsplash.com/300x300/?Book,Reactbook` } className="card-img-top" alt="no imae" style={{ "width": "270px", "height": "275px", 'cursor': 'pointer' }} onClick={() => navigate(`/books/${bookId}`)} />
                     </div>
                     <div className="card-body" >
                         <h5 className="card-text" style={{'fontStyle': 'italic'}}>  written by - {name} </h5>
@@ -186,7 +187,6 @@ function Cart({ name, review, category, title, userid, excerpt, bookId, getBook,
                         </div>
                     </div>
                 </div>
-
             </div>
         </>
     )
