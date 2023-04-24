@@ -9,10 +9,12 @@ function Home() {
   const [bookdata, setBookdata] = useState([])
   const [loading, setLoading] = useState(false)
 
+  let host = 'http://localhost:3000'
+  // 'https://bookmanagement-project-3-production-d358.up.railway.app/books'
   // Get Book Api call //
   const getBook = () => {
     setLoading(true)
-    fetch('https://bookmanagement-project-3-production-f5d6.up.railway.app/books', {
+    fetch(`${host}/books`, {
       headers: {
         'Content-Type': 'application/json',
         'x-api-key': localStorage.getItem('token')

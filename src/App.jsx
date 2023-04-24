@@ -1,5 +1,5 @@
 
-// import './App.css'
+import './App.css'
 
 import Navbar from './components/Navbar'
 
@@ -25,9 +25,9 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
       </Routes>
-      <footer className="mastfoot mt-auto text-center">
-        <div className=" inner">
-          <p >Cover template of <a href="https://Subham.com/">Book Management</a>, by <a href="https://twitter.com/mdo">@Subham </a> - 2022. &copy; All right reserved</p>
+      <footer className=" text-center" >
+        <div className=" inner" >
+          <p className='foo' >Cover template of <a href="https://Subham.com/">Book Management</a>, by <a href="https://twitter.com/mdo">@Subham </a> - 2022. &copy; All right reserved</p>
         </div>
       </footer>
     </BrowserRouter>

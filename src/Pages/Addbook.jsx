@@ -35,8 +35,8 @@ function About() {
     formdata.append('releasedAt', data.releasedAt)
     formdata.append('userId', data.userId)
 
-    // let host = 'http://localhost:3000'
-    let host = 'https://bookmanagement-project-3-production-f5d6.up.railway.app'
+    let host = 'http://localhost:3000'
+    // let host = 'https://bookmanagement-project-3-production-d358.up.railway.app'
 
     await axios.post(`${host}/books`, formdata, { headers: { 'x-api-key': localStorage.getItem('token') } }).then((res) => {
       // console.log(res.data)

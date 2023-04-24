@@ -44,7 +44,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 87vh;
  background-image: url("https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
  color: white;
 }
@@ -55,11 +55,13 @@
   padding: 20px;
 }
 
-/* footer{
-  clear: both;
-  position: relative;
-
-  margin-top: -200px;
+/* footer .foo{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+    
 } */
 
 @media only screen and (max-width: 320px) {

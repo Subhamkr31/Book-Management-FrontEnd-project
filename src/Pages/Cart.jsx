@@ -8,8 +8,8 @@ import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-let host = 'https://bookmanagement-project-3-production-f5d6.up.railway.app'
-// let host = 'http://localhost:3000/'
+// let host = 'https://bookmanagement-project-3-production-d358.up.railway.app'
+let host = 'http://localhost:3000'
 
 function Cart({ name, review, category, title, userid, excerpt, bookId, getBook, bookCover }) {
     const navigate = useNavigate()
@@ -78,7 +78,6 @@ function Cart({ name, review, category, title, userid, excerpt, bookId, getBook,
         }).catch(err => {
             toast.error(err.response.data.message)
         })
-
     }
 
     return (

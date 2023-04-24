@@ -14,9 +14,11 @@ function Login() {
     setData({ ...data, [e.target.name]: e.target.value }) // e.target.name
   }
 
+  let host = 'http://localhost:3000'
+  // https://bookmanagement-project-3-production-d358.up.railway.app/login
   // Login Api call ///
   const Submit = () => {
-    axios.post('https://bookmanagement-project-3-production-f5d6.up.railway.app/login', data).then(res => {
+    axios.post(`${host}/login`, data).then(res => {
       navigate('/')
 
       localStorage.setItem('token', res.data.data.token)

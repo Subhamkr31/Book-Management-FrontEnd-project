@@ -15,6 +15,8 @@ const SignUp = () => {
         setData({...data, [e.target.name] : e.target.value});
     }
 
+    let host = 'http://localhost:3000'
+    // https://bookmanagement-project-3-production-d358.up.railway.app/register
     // Create User Post Api call ///
     const submit = () =>{
         data.address = {
@@ -25,7 +27,7 @@ const SignUp = () => {
         delete data.city;
         delete data.street;
         delete data.pincode;
-        axios.post('https://bookmanagement-project-3-production-f5d6.up.railway.app/register',data).then(res => {
+        axios.post(`${host}/register`,data).then(res => {
             navigate('/login');
             toast.success(res.data.message);
             // console.log(res.data.message)
